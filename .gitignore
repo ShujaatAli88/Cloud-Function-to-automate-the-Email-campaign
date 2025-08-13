@@ -1,0 +1,46 @@
+# Cold Email Manager
+
+This project manages cold email marketing campaigns, including campaign fetching, logging, and integration with Smartlead API updates The 
+status of The Emails Sent to vendors in BigQuery This is Schudled on google cloud Schudler to Run everyday at 
+4:00 am Pakistan Time and Updates The records in Big Query like Email Status if they are valid or not and if a 
+Client is Interested or Not Interested etc This is Deployed as a Serverless fucntion on google Fucntions.
+
+## Features
+
+- Fetch active campaigns from Smartlead API
+- Logging with Loguru
+- Configurable via `.env` file
+
+## Setup
+
+1. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+2. Configure environment variables in `.env`:
+   ```
+   PROJECT_ID=wholesaling-data-warehouse
+   DATASET=DTS_Marketing_Data
+   TABLE=Wisconsin_cold_email
+   SMARTLEAD_API_KEY=your_api_key_here
+   EMAIL_LIMIT=50
+   WAIT_SECONDS=1
+   ```
+
+3. Run the main script:
+   ```sh
+   python main.py
+   ```
+
+## Files
+
+- `main.py` - Main entry point
+- `campaigns_handler.py` - Handles campaign fetching and status
+- `log_handler.py` - Logging setup
+- `config.py` - Loads configuration from `.env`
+- `add_columns.py` - CSV column management
+
+## Requirements
+
+See [requirements.txt](requirements.txt).
