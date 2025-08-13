@@ -1,1 +1,0 @@
-# Cloud-Function-to-automate-the-Email-campaign
